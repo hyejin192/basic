@@ -1,0 +1,58 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+body {padding: 50px;}
+.parent1{
+    width: 500px;
+    height: 500px;
+    background-image: url(https://img.freepik.com/premium-vector/square-grid-paper-seamless-pattern-millimeter-paper-sheet-background_434359-268.jpg?w=2000);
+}
+.parent1 .child1{
+    width: 100px;
+    height: 100px;
+    background-color: indianred;
+    /* relative : 주위에 아무런 영향을 주지 않고 자신의 기존 영역을 기억함  */
+    position: relative; 
+    left: 200px;
+}
+.parent1 .child1-2 {
+    width: 100px;
+    height: 100px;
+    background-color: lightskyblue;
+}
+
+.parent2{
+    position: relative;
+    margin-top: 30px;
+    width: 500px;   
+    height: 500px;
+    background-image: url(https://img.freepik.com/premium-vector/square-grid-paper-seamless-pattern-millimeter-paper-sheet-background_434359-268.jpg?w=2000);
+}
+.parent2 .child2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: indianred;
+    /* 나와 부모의 공간이 100px , 사실상 오른쪽을 100px, 아래로 100px 이동 */
+    /* right와 left를 동시에 쓰게되면 left만 적용됨 (left기준) */
+    left: 50%; top: 50%;
+    /* transform: translate(x,y); */
+    /* % : 자기 자신 */
+    transform: translate(-50%,-50%);
+
+}
+
+.parent3{
+    margin-top: 30px;
+    width: 500px;   
+    background-image: url(https://img.freepik.com/premium-vector/square-grid-paper-seamless-pattern-millimeter-paper-sheet-background_434359-268.jpg?w=2000);
+}
+.parent3 .child3{
+    position: fixed; /* 부모가 화면으로 바뀜 화면에 붙음 */
+    right: 0; bottom: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: indianred;
+}
+
+.parent4{ height: 2000px;}
+.parent4 .child4{}

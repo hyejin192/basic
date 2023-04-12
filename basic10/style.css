@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+body {
+    padding: 50px;
+}
+.parent1 {
+    background-image: url(https://img.freepik.com/premium-vector/square-grid-paper-seamless-pattern-millimeter-paper-sheet-background_434359-268.jpg?w=2000);
+    width: 500px;
+    height: 500px;
+}
+.parent1 .child{
+    width: 100px; height: 100px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    /* 한 줄일 때만 적용 글자를 정가운데로 위치 */
+    line-height: 100px; 
+    left: 100px; top: 100px;
+    position: relative;
+}
+
+.parent1 .child2{
+    width: 100px; height: 100px;
+    background-color: rgb(25, 0, 255);
+    color: #fff;
+    text-align: center;
+    line-height: 100px; 
+}
+.parent2{
+    margin-top: 30px;
+    position: relative;
+    width: 90%; 
+    height: 600px;
+    border: 1px solid gray;
+}
+.parent2 .child{
+    width: 600px; height: 400px;
+    background-color: rgb(255, 145, 0);
+    color: #fff;
+    position: absolute; /* 조상(body)이 자기 부모가 됨 */
+    left: 50%; top: 50%;
+    /* 상단 크기로 지정하게되면 사각형 꼭짓점을 기준으로 가운데 위치하기 때문에 자신의 몸을 기준으로 반만큼 반대로 이동시켜
+    주면 사각형 전체가 정중앙에 위치하게 됨 translate(x,y)기준 */
+    transform: translate(-50%,-50%); 
+    overflow: hidden; /* 부모보다 크기가 크면 넘치는 크기 만큼 숨김 */
+}
+
+.parent2 .child iframe {
+    width: 120%;
+    height: 100%;
+    color: #000;   
+    position: absolute; /* 부모(child)가 포지션이 있기 때문에 부모 안에 갇히게 됨 */
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.parent3{}
+.parent3 .cihld{}
+
+.parent4{}
+.parent4 .cihld{}

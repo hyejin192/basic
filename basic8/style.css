@@ -1,0 +1,33 @@
+* {margin: 0; padding: 0;}
+
+/* ::after 선택한 각 요소의 내용 뒤에 무언가를 삽입
+,::before 내용 앞에 무언가를 삽입 (항상 열린태그 뒤에 사용) 둘 다 content 속성을 사용 */
+.약::after{content: "";
+    /* after은 인라인요소(크기조절 불가능) */
+    /* 블록요소에만 적용됨 */
+    clear: both;
+    display: block; /* 속성을 블록요소로 변경 크기 인식 가능 */
+}
+
+.아빠{
+    padding: 20px;
+    background-color: rgba(63, 63, 240, 0.24);
+    width: 1000px;
+    margin: 0 auto;
+}
+.아빠 .자식{ 
+    background-color: rgba(182, 141, 141, 0.5);
+    width: 33.3333%;
+    height: 100px;
+    float: left;
+}
+.팔수{
+    margin-top: 30px;
+}
+.팔수 .자식8{
+    width: 45%;
+    background-color: rgba(17, 110, 53, 0.164);
+    float: left;
+    height: 100px;
+}
+.팔수 .자식1 {margin-right: 10%;}

@@ -1,0 +1,55 @@
+*{padding: 0; margin: 0;}
+
+.아빠 .효자 {
+    clear: both;
+}
+.아빠 {
+    width: 1000px;
+    background-color: lightgray;
+    border: 1px solid blue;
+    /* padding: 상 우 하 좌 */
+    padding: 10px 20px 30px 40px;
+    /* padding: 상 좌우 하 */
+    padding: 10px 20px 30px;
+    /* padding: 상하 좌우 */
+    padding : 10px 20px;
+    /* padding: 상하좌우 */
+    padding : 20px;
+/*     margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+    margin: 30px auto 0;
+}
+/* --- 철수 --- */
+.철수.아빠 .자식 {
+    background-color: rgba(32, 107, 57, 0.918);
+    width: 32%;
+    margin-right: 2%;
+    height: 100px;
+    float: left; /* 왼쪽부터 정렬 자식1,자식2,자식3 */
+}
+.철수.아빠 .자식3 {margin-right: 0;}
+.아빠 .효자 {
+    clear: both;
+}
+/* --- 칠수 --- */
+.칠수 .자식 {
+    background-color: orange;
+    width: 23.5%;
+    height: 100px;
+    float: left;
+    margin-right: 2%;
+}
+.칠수 .자식4 {
+    margin-right: 0;
+    overflow: hidden;
+}
+.칠수 .자식4 object{width: 100%;}
+/* 크기 상관 없이 초과된 부분은 숨김 */
+.칠수 .자식2 {overflow: hidden;}
+.칠수 .자식2 video { 
+    width: 100%; /* 부모의 넓이를 기준으로 100% 적용 */
+}
+.칠수 .자식3 {overflow: hidden;}
+.칠수 .자식3 img {width: 100%;}
+

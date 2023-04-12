@@ -1,0 +1,97 @@
+* {padding: 0; margin: 0;}
+
+.치료::after {
+    content: "";
+    clear: both; 
+    display: block; /* 부동 요소 옆의 흐름을 제어 */
+}
+.아빠 {
+    background-color: rgba(13, 81, 107, 0.404);
+    width: 1000px;
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 30px auto;
+}
+/* --------------------- 첫번째 영화 -------------------------- */
+.일수>div /* 직계 div만 적용 */ {
+    width: 32%;
+    margin-right: 2%;
+    height: 150px;
+    text-align: center;
+    line-height: 150px; /* 높이와 동일하게 해야 정중앙으로 정렬됨 */
+    float: left;
+    border-radius: 20px;
+}
+.일수>div:last-child {
+    margin-right: 0;
+}
+/* ----- 자식1 ----- */
+.일수 .자식1 {
+    background-image: url(https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86794/86794211672_727.jpg);
+    /* 넓이를 기준으로 채워지는 것 */
+    background-size: cover;
+    /* 기준이 되는 표지션 : relative,absolute,fixed */
+    position: relative;
+}
+.일수 .자식1 .cover {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%; height: 100%;
+    background-color: rgb(0, 45, 128);
+    opacity: 0;
+    transition: 0.3s; /* 마우스를 올렸을 때(:hover) 이동하는 시간 설정 */
+}
+.일수 .자식1:hover .cover {
+    opacity: 1;
+}
+
+/* ----- 자식2 ----- */
+.일수 .자식2 {
+    background-image: url(https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86794/86794211680_727.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.일수 .자식2 .cover {
+    position: absolute;
+    left: 50%; bottom: -50PX;
+    transform: translateX(-50%);
+    width: 100%; height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    line-height: 50px;
+    color: #fff;
+    transition: 0.3s;
+}
+.일수 .자식2:hover .cover {
+    /* 여기에 transition: 0.3;을 주게되면 마우스를 떼었을 때 설정한 시간이 적용 안됨 */
+    bottom: 0;
+}
+
+/* ----- 자식3 ----- */
+.일수 .자식3 {
+    position: relative;
+} 
+.일수 .자식3 .cover{
+    /* 기준이 되는 표지션을 설정해야 이동 가능 */
+    position: absolute;
+    width: 100%; height: 100%;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    line-height: 1.3;
+    border: 1px solid navy;
+    border-radius: 20px;
+} 
+.일수 .자식3 .cover .title {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    padding: 5px 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+.일수 .자식3 .cover video {
+    width: 100%;
+}
+

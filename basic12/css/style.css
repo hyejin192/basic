@@ -1,0 +1,49 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+
+.전체 {
+    /* 전체의 넓이는 부모인 body를 따르고
+    전체의 높이는 자식인 김일동을 따른다 */
+    border: 5px solid red;
+    padding: 20px;
+}
+.치료::after {
+    /* 가상의 공간을 마지막으로 설정 */
+    content: "";
+    clear: both;
+    display: block;
+}
+.김일동{
+    /* 김일동의 넓이는 부모인 전체를 따르고
+    김일동의 높이는 자식인 텍스트(김일동)의 높이가 된다 */
+    border: 5px solid blue;
+}
+/* ----- 김일동 end ----- */
+.김이동 {
+    border: 5px solid green;
+    width: 300px;
+    margin: 0 auto;
+}
+/* ----- 김이동 end ----- */
+.김삼동 {
+    border: 5px solid orange;
+    margin-top: 30px;
+}
+.김삼동 .삼자 {
+    background-color: lavender;
+    width: 33.3333%;
+    float: left;
+}
+.김삼동 .약 {
+    clear: both;
+}
+/* ----- 김삼동 end ----- */
+.김사동 {
+    border: 5px solid gray;
+}
+.김사동 .사자 {
+    background-color: rgba(135, 206, 250, 0.384);
+    width: 50%;
+    float: left;
+}
+/* ----- 김사동 end ----- */
