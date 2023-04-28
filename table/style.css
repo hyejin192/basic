@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 900px;
+    margin: 0 auto;
+}
+.wrap p {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.wrap>div {
+    margin-top: 50px;
+    border-top: 1px solid navy;
+}
+
+.wrap>div h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* ----------------------------- table1 */
+.table1 {}
+
+.table1 table {
+    border: 1px solid orange;
+    width: 100%;
+    text-align: center;
+}
+
+.table1 table tr th {
+    border: 1px solid orange;
+}
+
+.table1 table tr td {
+    border: 1px solid orange;
+}
+
+/* ----------------------------- table1-2 */
+.table1-2 table {
+    width: 100%;
+    text-align: center;
+}
+
+.table1-2 table tr th {
+    border: 1px solid #666;
+}
+
+.table1-2 table tr td {
+    border: 1px solid #666;
+}
+
+/* ----------------------------- table2 */
+.table2 table {
+    width: 100%;
+}
+
+.table2 table,
+.table2 table tr th,
+.table2 table tr td {
+    border: 1px solid indigo;
+    border-collapse: collapse;
+    /* 선 사이의 공간을 없앰 */
+    text-align: center;
+    padding: 15px;
+    background-color: lavender;
+}
+
+.table2 table tr:nth-child(1) {
+    border-bottom: 3px double #000;
+}
+
+.table2 table tr:nth-child(2) {
+    height: 100px;
+}
+
+.table2 table tr th:nth-child(1) {
+    width: 20%;
+}
+
+.table2 table tr th:nth-child(2) {
+    width: 60%;
+}
+
+.table2 table tr th:nth-child(3) {
+    width: 20%;
+}
+
+/* ----------------------------- table3 */
+.table3 {}
+
+.table3 table {
+    width: 100%;
+}
+
+.table3 table,
+.table3 table tr th,
+.table3 table tr td {
+    border: 1px solid rgb(2, 2, 2);
+    border-collapse: collapse;
+    /* 선 사이의 공간을 없앰 */
+    text-align: center;
+    padding: 15px;
+}
+
+/* ----------------------------- table4 */
+
+.table4 table {
+    width: 100%;
+}
+
+.table4 table,
+.table4 table tr th,
+.table4 table tr td {
+    border: 2px solid #000;
+    border-collapse: collapse;
+    /* 선 사이의 공간을 없앰 */
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(0, 100, 130);
+    color: #fff;
+}
+
+/* ----------------------------- table5 */
+.table5 table {
+    width: 100%;
+}
+
+.table5 table,
+.table5 table tr th,
+.table5 table tr td {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px;
+    background-color: #ccc;
+}
+
+/* ----------------------------- table6 */
+.table6 table {
+    width: 100%;
+}
+
+.table6 table,
+.table6 table tr th,
+.table6 table tr td {
+    border: 1px solid darkgreen;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px;
+    background-color: #d5dbb8;
+}
+
+/* ----------------------------- table7 */
+
+.table7 table {
+    width: 100%;
+}
+.table7 table,
+.table7 table tr th,
+.table7 table tr td {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px;
+}
+/* tr 중에서 짝수만 적용 (even=2n) */
+.table7 table tr:nth-child(even) {
+    background-color: rgba(114, 206, 236, 0.479);
+}
+/* tr 중에서 홀수만 적용 (odd=2n+1) 
+만약 아홉개의 행 중 세번째,여섯번째,아홉번째 행에 적용하고 싶다면 tr:nth-child(3n)*/
+.table7 table tr:nth-child(odd) {
+    background-color: #cccccc75;
+}
+.table7 table tr th:nth-child(even),
+.table7 table td:nth-child(even) {
+    background-color: rgba(122, 118, 126, 0.603);
+}
+
+/* ----------------------------- table8 */
+
+.table8 table {
+    width: 100%;
+}
+.table8 table,
+.table8 table tr th,
+.table8 table tr td {
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px;
+}
+.table8 table tr {
+    border-bottom: 1px solid #ccc;
+    transition: 0.3s;
+}
+.table8 table tr:hover {
+    background-color: rgba(175, 139, 166, 0.733);
+}
+
+/* ----------------------------- table9 */
+.table9 table {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.table9 table,
+.table9 table tr th,
+.table9 table tr td {
+    border: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px;
+}
+.table9 colgroup col:nth-child(1) {
+    background-color: rgba(146, 202, 129, 0.479);
+}
+.table9 colgroup col:nth-child(2) {
+    background-color: rgba(226, 140, 129, 0.397);
+}
+.table9 colgroup col:nth-child(3) {
+    background-color: rgba(129, 215, 226, 0.397);
+}

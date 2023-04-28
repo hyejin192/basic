@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap {}
+
+        .wrap>div {
+            width: 400px;
+            height: 400px;
+            background-color: rosybrown;
+            /* 부모인 wrap이 첫번째와 마지막 div의 상하 margin을 인식 못함
+            이럴 땐 부모에게 padding을 주는 게 좋음 */
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="child1">child1</div>
+        <div class="child2">child2</div>
+        <div class="child3">child3</div>
+        <div class="child4">child4</div>
+    </div>
+</body>
+</html>

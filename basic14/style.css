@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+body {
+    background-color: lightgray;
+}
+
+.box1 {
+    background-color: #fff;
+    
+}
+.box1 .child {
+    margin: 30px auto; /* margin 병합현상 (부모에 margin이 적용이 안됨) */
+    font-size: 30px;
+    font-weight: bold;
+    width: 300px;
+    background-color: rgb(143, 155, 120);
+    border: 10px solid rgb(143, 155, 120);
+    text-align: center;
+    
+    border-radius: 10px;
+    /* transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.78, 0.13, 0.16, 1.72);
+    transition-delay: 0.5s; */
+    /* transition:transform 0.3s cubic-bezier(0.78, 0.13, 0.16, 1.72) 0.5s; */
+
+    /* transition: transform 0.3s, background-color 0.5s, color 0.3s 0.5s; */
+
+    transition: all 0.3s; /* all 생략 가능 (기본값)*/
+}
+.box1:hover .child {
+    background-color: rgb(197, 181, 181);
+    color: #fff;
+    transform: translateY(-30px);
+}
+
+.box2 {
+    width: 400px;
+    font-size: 20px;
+    color: #222;
+    margin: 0 auto;
+    text-align: center;
+    background-color: lavender;
+    overflow: hidden;
+}
+.box2>div {
+    transform: translateX(-100%);
+    transition: 0.8s ease;
+}
+.box2:hover>div {
+    transform: translateX(0);
+}
+.box2 .one {transition-delay: 0.3s;}
+.box2 .two {transition-delay: 0.6s;}
+.box2 .three {transition-delay: 0.9s;}
+
+.box3 {
+    width: 100px; height: 100px;
+    background-color: rgb(128, 162, 175);
+    text-align: center;
+    line-height: 100px; /* 위 아래로 글자가 가운데로 적용 */
+    /* 애니메이션 이름(keyframes의 이름과 동일해야 함 */
+    animation-name: box_ani;
+    /* 애니메이션 움직이는 지속시간 second의 약자(초) */
+    animation-duration: 1s;
+    /* 애니메이션 반복횟수 (infinite : 무한반복) */
+    animation-iteration-count: 3; 
+    /* 애니메이션의 방향을 나타냄 
+    normal : 기본값 , alternate : 정방향 -> 역방향 -> 정방향 반복 
+    alternate-revese :  alternate와 반대 (역->정->역 반복)
+    revese : 위치의 시작이 반대로 실행*/
+    animation-direction: normal;
+    /* 애니메이션 지연시간(적용된 시간이 지난 후 실행) */
+    animation-delay: 1s;
+    /* 애니메이션 가속도 지정 */
+    animation-timing-function: ease;
+    /* 애니메이션의 시작점과 끝 후의 상태 조절
+    forwards : 애니메이션이 끝난 상태에서 멈춤 
+    backwords : 시작을 keyframes의 0%인 상태에서 시작(from에 지정한 위치)
+    both : forwards + backwords (form과 to에 지정한 위치에서 시작과 멈춤)*/
+    animation-fill-mode: both;
+}
+
+/* 애니메이션 움직임 제어 */
+@keyframes box_ani{
+    /* 시작지점 */
+    from{margin-left: 300px;} 
+    /* 도착지점 */
+    to{margin-left: 800px;}
+}   
+
+.box4 {
+    width: 100px; height: 100px;
+    background-color: rgb(177, 136, 148);
+    text-align: center;
+    line-height: 100px;
+
+    /*animation-name: box_ani2;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+    animation-fill-mode: both; */
+    animation: box_ani2 4s ease-in-out 2s reverse 3;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes box_ani2 {
+    0%{transform: translate(0px,0px);}
+    25%{transform: translate(200px,0px);}
+    50%{transform: translate(200px,200px);}
+    75%{transform: translate(0px,200px);}
+    100%{transform: translate(0px,0px);}
+}
